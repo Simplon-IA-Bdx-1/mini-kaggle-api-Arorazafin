@@ -1,7 +1,11 @@
 import pandas as pd 
 from sklearn.model_selection import train_test_split
 
-df = pd.read_csv('cs-training.csv',index_col=False)
+#df = pd.read_csv('cs-training.csv',index_col=False)
+url ='https://oml-data.s3.amazonaws.com/kaggle-give-me-credit-train.csv'
+df = pd.read_csv(url,index_col=False)
+
+
 df = df.fillna(0)
 df = df.drop(['Unnamed: 0'], axis =1)
 X = df.drop(['SeriousDlqin2yrs'], axis=1)
