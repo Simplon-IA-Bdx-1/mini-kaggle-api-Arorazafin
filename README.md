@@ -1,11 +1,30 @@
-## TO LAUNCH
+## TO RUN
 
-`python -m venv env`
+brief : https://gist.github.com/louisdorard/2652fc3b53b90c8492b732b5717f49e1
 
-`. ./env/Scripts/activate`
+```
+python -m venv env
+``` 
 
-`pip install -r requirements.txt`
+```
+. ./env/Scripts/activate`
+```
 
-`export FLASK_APP=api.py` 
+```
+pip install -r requirements.txt`
+``` 
 
-`flask run`
+```
+export FLASK_APP=api.py` 
+```
+
+```
+flask run
+``` 
+
+```
+curl --request POST \
+  --url 'http://localhost:5000/submit' \
+  --header 'accept: multipart/form-data' \
+  -F 'file=@test2-predictions.csv'
+```
